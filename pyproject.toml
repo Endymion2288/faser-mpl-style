@@ -1,0 +1,103 @@
+[build-system]
+requires = ["hatchling>=1.21"]
+build-backend = "hatchling.build"
+
+[project]
+name = "faser-mpl-style"
+dynamic = ["version"]
+description = "Matplotlib stylesheets, color palettes, and publication plotting helpers tailored to the FASER Collaboration at CERN"
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.9"
+authors = [
+    { name = "FASER Plot Style Contributors" },
+]
+keywords = [
+    "matplotlib",
+    "style",
+    "mplstyle",
+    "physics",
+    "hep",
+    "particle-physics",
+    "cern",
+    "lhc",
+    "faser",
+    "atlas",
+    "plotting",
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Scientific/Engineering :: Physics",
+    "Topic :: Scientific/Engineering :: Visualization",
+    "Typing :: Typed",
+]
+dependencies = [
+    "matplotlib>=3.7",
+    "numpy>=1.22",
+]
+
+[project.optional-dependencies]
+scipy = ["scipy>=1.10"]
+dev = [
+    "pytest>=7.4",
+    "pytest-cov>=4.1",
+    "ruff>=0.4",
+    "mypy>=1.8",
+    "build>=1.0",
+    "twine>=5.0",
+    "Pillow>=10.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/FASER-Collaboration/faser-mpl-style"
+Documentation = "https://github.com/FASER-Collaboration/faser-mpl-style#readme"
+Repository = "https://github.com/FASER-Collaboration/faser-mpl-style"
+Issues = "https://github.com/FASER-Collaboration/faser-mpl-style/issues"
+
+[tool.hatch.version]
+path = "src/faser_mpl_style/_version.py"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/faser_mpl_style"]
+
+[tool.hatch.build.targets.sdist]
+include = [
+    "/src",
+    "/tests",
+    "/examples",
+    "/docs",
+    "/README.md",
+    "/CHANGELOG.md",
+    "/LICENSE",
+    "/pyproject.toml",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra -W error::UserWarning"
+
+[tool.ruff]
+line-length = 100
+target-version = "py39"
+src = ["src", "tests", "examples"]
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "UP", "B", "SIM"]
+ignore = ["E501"]
+
+[tool.mypy]
+python_version = "3.10"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = true
+check_untyped_defs = true
+ignore_missing_imports = true

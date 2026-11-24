@@ -1,0 +1,118 @@
+# FASER Collaboration compact square Matplotlib stylesheet (6x6 for 2-up/3-up journal panels)
+
+# Figure & Savefig
+figure.figsize: 6.0, 6.0
+figure.dpi: 150
+figure.facecolor: white
+figure.edgecolor: white
+figure.titlesize: 18
+figure.titleweight: normal
+figure.subplot.left: 0.16
+figure.subplot.right: 0.95
+figure.subplot.bottom: 0.16
+figure.subplot.top: 0.94
+figure.constrained_layout.use: False
+
+savefig.dpi: 300
+savefig.facecolor: white
+savefig.edgecolor: white
+savefig.bbox: tight
+savefig.pad_inches: 0.05
+
+# Typography & Zero-Warning Cross-Platform Mathtext
+font.family: sans-serif
+font.sans-serif: TeX Gyre Heros, Helvetica Neue, Helvetica, Nimbus Sans, Nimbus Sans L, Liberation Sans, Arial, FreeSans, DejaVu Sans
+font.cursive: TeX Gyre Chorus, Zapf Chancery, URW Chancery L, STIXGeneral, DejaVu Sans
+font.size: 15.0
+
+text.usetex: False
+mathtext.fontset: custom
+mathtext.rm: sans
+mathtext.sf: sans
+mathtext.it: sans:italic
+mathtext.bf: sans:bold
+mathtext.bfit: sans:italic:bold
+mathtext.cal: cursive
+mathtext.tt: monospace
+mathtext.default: it
+mathtext.fallback: stixsans
+
+# Axes & Spines
+axes.facecolor: white
+axes.edgecolor: black
+axes.linewidth: 1.0
+axes.grid: False
+axes.titlesize: 17.0
+axes.titlepad: 8.0
+axes.labelsize: 18.0
+axes.labelpad: 6.0
+axes.unicode_minus: True
+axes.formatter.limits: -3, 4
+axes.formatter.use_mathtext: True
+axes.xmargin: 0.05
+axes.ymargin: 0.05
+axes.spines.left: True
+axes.spines.bottom: True
+axes.spines.top: True
+axes.spines.right: True
+axes.prop_cycle: cycler('color', ['0072B2', 'D55E00', '009E73', 'E69F00', 'CC79A7', '56B4E9', '595959'])
+
+xaxis.labellocation: right
+yaxis.labellocation: top
+
+# Ticks (ATLAS/FASER symmetric inward 4-sided major + minor)
+xtick.top: True
+xtick.bottom: True
+xtick.direction: in
+xtick.labelsize: 15.0
+xtick.major.size: 7.0
+xtick.minor.size: 3.5
+xtick.major.width: 1.0
+xtick.minor.width: 0.75
+xtick.major.pad: 6.0
+xtick.minor.pad: 6.0
+xtick.minor.visible: True
+
+ytick.left: True
+ytick.right: True
+ytick.direction: in
+ytick.labelsize: 15.0
+ytick.major.size: 7.0
+ytick.minor.size: 3.5
+ytick.major.width: 1.0
+ytick.minor.width: 0.75
+ytick.major.pad: 6.0
+ytick.minor.pad: 6.0
+ytick.minor.visible: True
+
+# Grid (off by default; clean styling when enabled via ax.grid(True))
+grid.color: CCCCCC
+grid.linestyle: :
+grid.linewidth: 0.6
+grid.alpha: 0.7
+
+# Lines, Markers, Errorbars, Patches, Images
+lines.linewidth: 1.8
+lines.markersize: 6.5
+lines.markeredgewidth: 1.0
+errorbar.capsize: 0.0
+patch.linewidth: 1.0
+hist.bins: auto
+image.cmap: viridis
+
+# Legend (frameless FASER/ATLAS norm)
+legend.frameon: False
+legend.fancybox: False
+legend.framealpha: 0.85
+legend.facecolor: white
+legend.edgecolor: CCCCCC
+legend.numpoints: 1
+legend.scatterpoints: 1
+legend.fontsize: 14.0
+legend.title_fontsize: 15.0
+legend.labelspacing: 0.35
+legend.handlelength: 1.8
+legend.handletextpad: 0.5
+legend.borderpad: 0.3
+legend.borderaxespad: 0.6
+legend.columnspacing: 1.2
