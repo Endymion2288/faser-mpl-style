@@ -10,7 +10,7 @@ readme = "README.md"
 license = { text = "MIT" }
 requires-python = ">=3.9"
 authors = [
-    { name = "FASER Plot Style Contributors" },
+    { name = "Xing Cheng", email = "endymion012288@gmail.com" }
 ]
 keywords = [
     "matplotlib",
@@ -58,10 +58,10 @@ dev = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/FASER-Collaboration/faser-mpl-style"
-Documentation = "https://github.com/FASER-Collaboration/faser-mpl-style#readme"
-Repository = "https://github.com/FASER-Collaboration/faser-mpl-style"
-Issues = "https://github.com/FASER-Collaboration/faser-mpl-style/issues"
+Homepage = "https://github.com/Endymion2288/faser-mpl-style"
+Documentation = "https://github.com/Endymion2288/faser-mpl-style/blob/main/README.md"
+Repository = "https://github.com/Endymion2288/faser-mpl-style"
+Issues = "https://github.com/Endymion2288/faser-mpl-style/issues"
 
 [tool.hatch.version]
 path = "src/faser_mpl_style/_version.py"
